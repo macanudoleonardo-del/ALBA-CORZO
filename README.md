@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# albacorzo.com
 
-## Getting Started
+Digital-authority site for **Dra. Alba Corzo**, built to the *Digital Authority
+Blueprint* (Spencer Hoffmann v1.0).
 
-First, run the development server:
+Next.js 15 · TypeScript · Tailwind CSS 4 · Framer Motion · Supabase · Vercel.
+
+## Status
+
+**Phase 1 (Premium website) — complete.**
+
+- 36 routes: 6 pages × 6 locales (es · en · pt · fr · it · zh)
+- Spanish at the root, the other five path-prefixed, natural slugs per language
+- Schema.org JSON-LD: Person, WebSite, WebPage, BreadcrumbList,
+  SiteNavigationElement, FAQPage
+- Unique meta title + description per page *per language*
+- hreflang across all six locales plus `x-default`
+- Open Graph + Twitter Cards
+- `robots.txt` explicitly allowing 15 AI crawlers (GPTBot, ClaudeBot,
+  PerplexityBot, Google-Extended, …)
+- Dynamic `sitemap.xml` with per-URL language alternates
+- First-visit language detection that never redirects crawlers or deep links
+- Contact form → Supabase `leads` table
+- Medical disclaimer on every page
+
+Phases 2–7 (Resend + WhatsApp, IndexNow, authority platforms, Digital PR,
+AI optimization, maintenance) are not started.
+
+## ⚠️ Before launch
+
+**Read `VERIFY.md`.** Every fact about Alba Corzo is currently a placeholder.
+Nothing is invented — and nothing should be published until she confirms it.
+
+## Setup
 
 ```bash
+npm install
+cp .env.example .env.local   # fill in Supabase credentials
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create the leads table by running `supabase/schema.sql` in the Supabase SQL
+editor.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel, auto-deploying from this repository. Set `SUPABASE_URL` and
+`SUPABASE_SERVICE_ROLE_KEY` as environment variables (the service role key is
+server-side only — never prefix it with `NEXT_PUBLIC_`).

@@ -1,13 +1,13 @@
 import Shell from "@/components/Shell";
-import HomeView from "@/views/HomeView";
+import PressView from "@/views/PressView";
 import { buildMetadata } from "@/lib/seo";
 import { PAGE_SEO } from "@/content/pages";
 import { tr } from "@/lib/i18n";
 import { JsonLd, pageSchemas } from "@/lib/schema";
 
-const LOCALE = "es" as const;
-const KEY = "home" as const;
-const PATH = "/";
+const LOCALE = "en" as const;
+const KEY = "press" as const;
+const PATH = "/press";
 
 const TITLE = tr(PAGE_SEO[KEY].title, LOCALE);
 const DESCRIPTION = tr(PAGE_SEO[KEY].description, LOCALE);
@@ -29,10 +29,10 @@ export default function Page() {
           title: TITLE,
           path: PATH,
           description: DESCRIPTION,
-          crumbs: [{"name": "Inicio", "path": "/"}],
+          crumbs: [{"name": "Home", "path": "/"}, {"name": "Press", "path": "/press"}],
         })}
       />
-      <HomeView locale={LOCALE} />
+      <PressView locale={LOCALE} />
     </Shell>
   );
 }

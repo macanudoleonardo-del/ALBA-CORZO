@@ -5,7 +5,7 @@ import { PAGE_SEO } from "@/content/pages";
 import { tr } from "@/lib/i18n";
 import { JsonLd, pageSchemas } from "@/lib/schema";
 
-const LOCALE = "es" as const;
+const LOCALE = "it" as const;
 const KEY = "home" as const;
 const PATH = "/";
 
@@ -29,7 +29,7 @@ export default function Page() {
           title: TITLE,
           path: PATH,
           description: DESCRIPTION,
-          crumbs: [{"name": "Inicio", "path": "/"}],
+          crumbs: [{"name": "Home", "path": "/"}],
         })}
       />
       <HomeView locale={LOCALE} />
