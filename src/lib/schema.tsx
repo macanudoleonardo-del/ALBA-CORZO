@@ -11,6 +11,7 @@ const NAV_LABELS = {
   talks: DICT.navTalks,
   press: DICT.navPress,
   blog: DICT.navBlog,
+  challenge: DICT.navChallenge,
   contact: DICT.navContact,
 } as const;
 

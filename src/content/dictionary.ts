@@ -6,6 +6,7 @@ export const DICT = {
   navTalks:   { es: "Conferencias", en: "Talks", pt: "Palestras", fr: "Conférences", it: "Conferenze", zh: "演讲" },
   navPress:   { es: "Prensa", en: "Press", pt: "Imprensa", fr: "Presse", it: "Stampa", zh: "媒体" },
   navBlog:    { es: "Blog", en: "Blog", pt: "Blog", fr: "Blog", it: "Blog", zh: "文章" },
+  navChallenge: { es: "Reto de 5 días", en: "5-Day Challenge", pt: "Desafio de 5 dias", fr: "Défi 5 jours", it: "Sfida di 5 giorni", zh: "五天挑战" },
   navContact: { es: "Contacto", en: "Contact", pt: "Contato", fr: "Contact", it: "Contatti", zh: "联系" },
 
   heroCta: { es: "Hablemos", en: "Get in touch", pt: "Vamos conversar", fr: "Parlons-en", it: "Parliamone", zh: "联系我" },

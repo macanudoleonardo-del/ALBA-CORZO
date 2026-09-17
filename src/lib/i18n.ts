@@ -56,6 +56,10 @@ export const ROUTES = {
     es: "/contacto", en: "/contact", pt: "/contato",
     fr: "/contact", it: "/contatti", zh: "/lianxi",
   },
+  challenge: {
+    es: "/reto", en: "/challenge", pt: "/desafio",
+    fr: "/defi", it: "/sfida", zh: "/tiaozhan",
+  },
 } as const satisfies Record<string, Record<Locale, string>>;
 
 export type RouteKey = keyof typeof ROUTES;

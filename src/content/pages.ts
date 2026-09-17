@@ -98,4 +98,22 @@ export const PAGE_SEO: Record<RouteKey, { title: LocalizedText; description: Loc
       zh: "演讲、企业活动、媒体与合作的联系方式。",
     },
   },
+  challenge: {
+    title: {
+      es: "5 días de escucha — Dra. Alba Corzo",
+      en: "5 Days of Listening — Dr. Alba Corzo",
+      pt: "5 dias de escuta — Dra. Alba Corzo",
+      fr: "5 jours d'écoute — Dre Alba Corzo",
+      it: "5 giorni di ascolto — Dott.ssa Alba Corzo",
+      zh: "倾听身体的五天 — Alba Corzo 医生",
+    },
+    description: {
+      es: "Un reto de cinco días con cuatro gestos pequeños al día: escucha, mesa, movimiento y descanso. Educación en salud, sin dietas ni promesas.",
+      en: "A five-day challenge with four small actions a day: listening, table, movement and rest. Health education, without diets or promises.",
+      pt: "Um desafio de cinco dias com quatro gestos pequenos por dia: escuta, mesa, movimento e descanso. Educação em saúde, sem dietas nem promessas.",
+      fr: "Un défi de cinq jours avec quatre petits gestes par jour : écoute, table, mouvement et repos. De l'éducation à la santé, sans régime ni promesses.",
+      it: "Una sfida di cinque giorni con quattro piccoli gesti al giorno: ascolto, tavola, movimento e riposo. Educazione alla salute, senza diete né promesse.",
+      zh: "五天挑战，每天四个小动作：倾听、餐桌、活动与休息。健康科普，不谈节食，不做承诺。",
+    },
+  },
 };
