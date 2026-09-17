@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Section from "@/components/Section";
 import Reveal from "@/components/Reveal";
 import { SITE } from "@/lib/site";
@@ -15,7 +16,8 @@ export default function HomeView({ locale }: { locale: Locale }) {
           aria-hidden
           className="pointer-events-none absolute left-1/2 top-[-18rem] h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-accent/10 blur-[120px]"
         />
-        <div className="relative mx-auto max-w-6xl px-6 py-28 md:py-40">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 py-28 md:py-40 lg:grid-cols-[1.15fr_0.85fr]">
+          <div>
           <Reveal>
             <p className="text-xs font-medium uppercase tracking-[0.22em] text-accent">
               {tr(SITE.title, locale)}
@@ -47,6 +49,23 @@ export default function HomeView({ locale }: { locale: Locale }) {
               </Link>
             </div>
           </Reveal>
+          </div>
+
+          {SITE.sections.portraits && (
+            <Reveal delay={0.2}>
+              <div className="relative mx-auto w-full max-w-sm overflow-hidden rounded-2xl border border-border">
+                <Image
+                  src={SITE.portraits.hero}
+                  alt={SITE.formalName}
+                  width={900}
+                  height={1200}
+                  priority
+                  sizes="(max-width: 1024px) 80vw, 380px"
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </Reveal>
+          )}
         </div>
       </section>
 

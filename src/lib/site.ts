@@ -52,6 +52,16 @@ export const SITE = {
     assistantEmail: "[EMAIL_ASISTENTE]",
   },
 
+  /**
+   * Portrait photography. Files live in public/portraits/.
+   * `sections.portraits` below stays false until the files are actually in
+   * the repo, so the site never renders a broken image.
+   */
+  portraits: {
+    hero: "/portraits/alba-hero.jpg",      // vertical, head-and-shoulders
+    about: "/portraits/alba-about.jpg",    // vertical or square
+  },
+
   /** CONFIRMED — publicly listed profiles. */
   socials: {
     instagram: "https://www.instagram.com/albacorzo.md/",
@@ -82,6 +92,7 @@ export const SITE = {
     books: false,        // needs real publications
     talks: false,        // needs real past/upcoming talks
     blog: true,          // safe: our own educational content
+    portraits: false,    // flip to true once public/portraits/ has the files
   },
 } as const;
 
