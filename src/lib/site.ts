@@ -9,8 +9,8 @@
  */
 
 export const SITE = {
-  domain: "albacorzo.com",
-  url: "https://albacorzo.com",
+  domain: "draalbacorzomd.com",
+  url: "https://draalbacorzomd.com",
 
   /** CONFIRMED — her own public profiles use this name. */
   name: "Alba Corzo",
@@ -46,7 +46,7 @@ export const SITE = {
   },
 
   contact: {
-    email: "[email@albacorzo.com]",
+    email: "[email@draalbacorzomd.com]",
     /** Assistant's WhatsApp — Phase 2 of the blueprint. Digits only, no +. */
     whatsapp: "[WHATSAPP_ASISTENTE]",
     assistantEmail: "[EMAIL_ASISTENTE]",

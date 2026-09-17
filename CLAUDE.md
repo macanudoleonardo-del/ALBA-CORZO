@@ -3,7 +3,7 @@
 ## ⚠️ This project is independent — never mix it with another
 
 The owner runs several unrelated businesses. **This repo is only Dra. Alba
-Corzo / albacorzo.com.**
+Corzo / draalbacorzomd.com.**
 
 - Nothing from `drleonardovergara` (Dr. Leonardo Vergara / Amor Consciente /
   saludmetabolico.com) belongs here, and nothing from here belongs there — no
@@ -28,7 +28,7 @@ follower counts, awards, media coverage, patient outcomes or testimonials.
 
 The digital-authority site for **Dra. Alba Corzo**, built to the *Digital
 Authority Blueprint* (Spencer Hoffmann, v1.0). Live domain:
-**albacorzo.com**. Phase 1 (premium site) is done; Phases 2–7 are pending.
+**draalbacorzomd.com**. Phase 1 (premium site) is done; Phases 2–7 are pending.
 
 ## Tech stack
 

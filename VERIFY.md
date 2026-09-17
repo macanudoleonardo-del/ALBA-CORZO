@@ -26,7 +26,7 @@ and must be replaced with her own approved wording, or deleted.
 | "Médica Health Coach" | her public Facebook page |
 | Instagram `@albacorzo.md` | live profile |
 | Facebook `/Dra.AlbaCorzo` | live profile |
-| Domain `albacorzo.com` | owner-supplied |
+| Domain `draalbacorzomd.com` | owner-supplied (new domain; the WordPress site keeps `albacorzo.com`) |
 
 ## Unverified leads — do NOT publish until she confirms
 

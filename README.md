@@ -1,4 +1,4 @@
-# albacorzo.com
+# draalbacorzomd.com
 
 Digital-authority site for **Dra. Alba Corzo**, built to the *Digital Authority
 Blueprint* (Spencer Hoffmann v1.0).
@@ -44,6 +44,8 @@ editor.
 
 ## Deploy
 
-Vercel, auto-deploying from this repository. Set `SUPABASE_URL` and
+Vercel, auto-deploying from this repository, on **draalbacorzomd.com**.
+The legacy WordPress site keeps `albacorzo.com` — the two are separate, so
+nothing needs to be cut over to launch. Set `SUPABASE_URL` and
 `SUPABASE_SERVICE_ROLE_KEY` as environment variables (the service role key is
 server-side only — never prefix it with `NEXT_PUBLIC_`).
