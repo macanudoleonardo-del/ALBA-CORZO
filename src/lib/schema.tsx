@@ -5,6 +5,16 @@ import { TALKS_FAQ } from "@/content/faq";
 
 const base = (locale: Locale) => (locale === "es" ? SITE.url : `${SITE.url}/${locale}`);
 
+/** Drawn from her own FAQ answer, not invented. */
+const KNOWS_ABOUT: Record<Locale, string[]> = {
+  es: ["Salud y hábitos", "Señales del cuerpo", "Descanso y sueño", "Alimentación", "Cambio sostenible"],
+  en: ["Health and habits", "The body's signals", "Rest and sleep", "Nutrition", "Sustainable change"],
+  pt: ["Saúde e hábitos", "Sinais do corpo", "Descanso e sono", "Alimentação", "Mudança sustentável"],
+  fr: ["Santé et habitudes", "Les signaux du corps", "Repos et sommeil", "Alimentation", "Changement durable"],
+  it: ["Salute e abitudini", "I segnali del corpo", "Riposo e sonno", "Alimentazione", "Cambiamento sostenibile"],
+  zh: ["健康与习惯", "身体信号", "休息与睡眠", "饮食", "可持续的改变"],
+};
+
 const NAV_LABELS = {
   home: DICT.navHome,
   about: DICT.navAbout,
@@ -29,8 +39,12 @@ export function personSchema(locale: Locale) {
     givenName: "Alba",
     familyName: "Corzo",
     url: base(locale),
+    alternateName: SITE.name,
     jobTitle: tr(SITE.title, locale),
     knowsLanguage: ["es", "en"],
+    // Subject-matter signals, taken from her own stated topics. No claim of
+    // expertise beyond what she has said she works on.
+    knowsAbout: KNOWS_ABOUT[locale],
     sameAs: SAME_AS,
     mainEntityOfPage: { "@id": `${SITE.url}/#website` },
   };
@@ -144,6 +158,16 @@ export function pageSchemas({
     webPageSchema(locale, title, path, description),
     breadcrumbSchema(locale, crumbs),
   ];
+
+  if (key === "about") {
+    graph.push({
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      url: `${base(locale)}${path}`,
+      inLanguage: locale,
+      mainEntity: { "@id": `${SITE.url}/#person` },
+    });
+  }
 
   if (key === "talks") {
     graph.push(

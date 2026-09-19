@@ -5,7 +5,11 @@ import { LOCALES, ROUTES, localePath, type RouteKey } from "@/lib/i18n";
 /** Every URL in every locale, each carrying its full hreflang alternate set. */
 export default function sitemap(): MetadataRoute.Sitemap {
   const keys = Object.keys(ROUTES) as RouteKey[];
-  const lastModified = new Date();
+
+  // A fresh `new Date()` here would stamp all 42 URLs as modified on every
+  // deploy, which trains Google to distrust the signal. Bump this only when
+  // the content genuinely changes.
+  const lastModified = new Date("2026-09-19");
 
   return LOCALES.flatMap((locale) =>
     keys.map((key) => ({

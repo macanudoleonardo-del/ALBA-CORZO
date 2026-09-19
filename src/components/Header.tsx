@@ -11,6 +11,7 @@ const NAV: { key: RouteKey; label: keyof typeof DICT }[] = [
   { key: "about", label: "navAbout" },
   { key: "talks", label: "navTalks" },
   { key: "press", label: "navPress" },
+  { key: "challenge", label: "navChallenge" },
   { key: "blog", label: "navBlog" },
 ];
 

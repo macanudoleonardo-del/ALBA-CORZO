@@ -60,6 +60,9 @@ export function buildMetadata({
       description,
       url: canonical,
       locale: LOCALE_TAGS[locale].replace("-", "_"),
+      alternateLocale: LOCALES.filter((l) => l !== locale).map((l) =>
+        LOCALE_TAGS[l].replace("-", "_"),
+      ),
       images: [OG_IMAGE],
     },
     twitter: {
@@ -68,6 +71,9 @@ export function buildMetadata({
       description,
       images: [OG_IMAGE.url],
     },
+    authors: [{ name: SITE.formalName, url: SITE.url }],
+    creator: SITE.formalName,
+    publisher: SITE.formalName,
     robots: {
       index: true,
       follow: true,
